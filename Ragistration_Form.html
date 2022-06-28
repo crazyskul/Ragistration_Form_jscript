@@ -1,0 +1,634 @@
+
+<html>
+
+
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <div class="container" style=" padding-left: 25%; padding-right: 20%;" >
+  <h2>Ragistration Form</h2>
+
+
+<form>
+
+<div class="col-lg-10 col-md-2">
+   <div class="form-group row">
+
+    <label class="control-label col-md-4 " for="email">First Name:</label>
+    <div class="col-md-8">
+      <input class="form-control form-control-sm" type="text" placeholder="" id="first_n">
+      <label id="f_name" style=" color: brown;"></label>
+    </div>
+  </div></br>
+  
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 " for="email">Last Name:</label>
+    <div class="col-md-8">
+      <input class="form-control form-control-sm" type="text" placeholder="" id="last_n">
+      <label id="l_name" style="color: brown;"></label>
+    </div>
+  </div></br>
+
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 " for="email">Address:</label>
+    <div class="col-md-8">
+      <textarea class="form-control" id="address" rows="4" ></textarea>
+      <label id="user_address" style=" color: brown;"></label>
+    </div>
+  </div></br>
+
+
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 " for="email">City:</label>
+    <div class="col-md-8">
+      <select class="form-select" aria-label="Default select example" id="city">
+        <option selected>select City</option>
+        <option value="Ahemdabad">Ahemdabad</option>
+        <option value="rajkot">rajkot</option>
+        <option value="Bhavnagar">Bhavnagar</option>
+      </select>
+      <label id="label_city" style="color: brown;"></label>
+    </br>
+    </div>
+  </div></br>
+
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 " for="email">State:</label>
+    <div class="col-md-8">
+      <select class="form-select" aria-label="Default select example" id="state">
+        <option selected>select State</option>
+        <option value="Gujrat">Gujrat</option>
+        <option value="Rajsthan">Rajsthan</option>
+        <option value="panjab">panjab</option>
+      </select>
+      <label id="label_state" style="color: brown;"></label>
+    </div>
+    </div></br>
+
+
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 " for="pincode">Pincode:</label>
+    <div class="col-md-8">
+      <input name="pincode" type="text" inputmode="numeric" maxlength="6" id="pincode"  onkeypress="return isNumber(event)" ></br>
+      <label id="u_pincode" style=" color: brown;"></label>
+      </br>
+    </div>
+    
+  </div></br>
+  
+
+  <div class="form-group row" >
+
+    <label class="control-label col-md-4 ">Gender:</label>
+
+    <div class="col-md-8">
+      <div class="form-check form-check-inline"  id="gen" > 
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioMale" value="Male">
+        <label class="form-check-label" for="radioMale">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioFemale" value="Female">
+        <label class="form-check-label" for="radioFemale">Female</label>
+      
+      </div></br>
+      <label id="u_gender" style="color: brown;"></label>
+
+    </div>
+  </div>
+  
+  </br>
+  
+  <div class="form-group row" id="itemForm">
+
+    <label class="control-label col-md-4 ">Hobby:</label>
+    <div class="col-md-8">
+      <div class="form-check form-check-inline">
+       
+        <input class="form-check-input" type="checkbox" name="hobby" id="game" value="game">
+        <label class="form-check-label" for="inlineCheckbox1">Games</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox"  name="hobby" id="listensong" value="listensong">
+        <label class="form-check-label" for="inlineCheckbox2">Listning song</label>
+      </div>
+
+    </div>
+    <label id="label_hobby" style="color: brown; padding-left: 35%;"></label>
+  </div></br>
+
+
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 " >Date of birth:</label>
+    <div class="col-md-8">
+      <div class="form-group"> 
+        
+        <input class="form-control" id="dateofbirth" name="date" placeholder="MM/DD/YYY" type="date">
+        <label id="dt_birth" style="color: brown;"></label>
+      </div>
+     </div>
+  </div></br>
+
+
+
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 ">Mobile No.</label>
+    <div class="col-md-8">
+      <div class="form-group">     
+        <input class="form-control" id="number" name="Number" placeholder="" type="text"  inputmode="numeric" minlength="10" maxlength="10">
+        <label id="u_phone_no" style="color: brown;"></label>
+      </br>
+      </div>
+     </div>
+  </div></br>
+
+
+  <div class="form-group row">
+
+    <label class="control-label col-md-4 " for="email">Email</label>
+    <div class="col-md-8">
+      <div class="form-group"> <!-- Date input -->
+        
+        <input class="form-control" id="Email" name="Email" placeholder="" type="email">
+        <label id="label_email" style="color: brown;"></label>
+      </div></br>
+     </div>
+  </div>
+
+  <div class="form-group row">
+
+    <button type="button" class="btn btn-secondary" onclick= "check_event_validation(); " id="submit" > Register </button>
+    
+  </div>
+
+</div>
+</div>
+<div class="container">
+<table class="table table-striped" style="display: none;" id="tbl">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Hobby</th>
+      <th scope="col">Date of birth</th>
+      <th scope="col">Mobile No.</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td id="fn"></td>
+      <td id="ln"></td>
+      <td id="Add"></td>
+      <td id="cty"></td>
+      <td id="stat"></td>
+      <td id="pin_code"></td>
+      <td id="xender"></td>
+      <td id="hob"></td> 
+      <td id="db"></td>
+      <td id="mob"></td>
+      <td id="mail"></td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+</div>
+</form>
+</body>
+</html>
+
+
+<script>
+  
+    function myfunction(){
+      
+      document.getElementById("tbl").style.display = "block";
+      
+      var fname = document.getElementById("first_n").value;
+      var lname = document.getElementById("last_n").value;
+      var add_ress =  document.getElementById("address").value;
+      var usre_city = document.getElementById("city").value;
+      var usre_state = document.getElementById("state").value;
+      var usre_pincode =  document.getElementById("pincode").value;
+      
+
+      console.log(fname);
+    // logic for redio button value
+      var radios = document.getElementsByName("inlineRadioOptions");
+    var selected = Array.from(radios).find(radio => radio.checked);
+      var gen_value =selected.value;
+      
+    // get checkbox value
+    var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    var usre_hobby = "";
+
+    markedCheckbox.forEach((e)=>{
+      usre_hobby +=e.value+",";
+    });
+
+      var dob = document.getElementById('dateofbirth').value;
+      var mobile =  document.getElementById('number').value;
+      var e_mail =  document.getElementById('Email').value;
+
+
+    //display value in table from ragigistration form
+
+      document.getElementById("fn").innerHTML = fname;
+      document.getElementById("ln").innerHTML = lname;
+      document.getElementById("Add").innerHTML = add_ress;
+      document.getElementById("cty").innerHTML = usre_city;
+      document.getElementById("stat").innerHTML = usre_state;
+      document.getElementById("pin_code").innerHTML = usre_pincode;
+      document.getElementById("xender").innerHTML = selected.value;
+      document.getElementById("hob").innerHTML = usre_hobby;
+      document.getElementById("db").innerHTML = dob;
+      document.getElementById("mob").innerHTML = mobile;
+      document.getElementById("mail").innerHTML = e_mail;
+
+      
+    }
+    function validate() {  
+        
+   
+
+   
+    
+    var fname = document.getElementById("first_n").value;
+    var lname = document.getElementById("last_n").value;
+    var add_ress =  document.getElementById("address").value;
+    var usre_city = document.getElementById("city").value;
+    var usre_state = document.getElementById("state").value;
+    var usre_pincode =  document.getElementById("pincode").value;
+    var user_emailid =document.getElementById("Email").value;
+    var one=document.getElementById('radioMale').checked;
+    var two=document.getElementById('radioFemale').checked;
+    var mo_number = document.getElementById('number').value;
+    var label_dob =document.getElementById('dateofbirth').value;
+    var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    var usrehobby = "";
+
+    markedCheckbox.forEach((e)=>{
+      usrehobby +=e.value+",";
+    });
+
+           var flag = true;
+            // validation for FirstName
+
+
+            if (fname.length == 0 || fname==null) {  
+             document.getElementById("f_name").innerHTML = "*Please Enter FirstName";
+             flage = false;
+ 
+            }
+            else{
+             
+             document.getElementById("f_name").style.display = "none";
+              
+            }
+           
+            // validation for lastName
+            if (lname.length == 0 || lname==null) {  
+              
+            
+                document.getElementById("l_name").innerHTML = "*Please Enter LastName"; 
+                flag = false;
+                
+             
+            }
+            else{
+              document.getElementById("l_name").style.display = "none";
+              
+            }
+
+            // validation for address
+                       
+            if((add_ress.length <20)|| (add_ress.length >100)){
+              document.getElementById("user_address").innerHTML = "*Please Enter  Address 20 to 100 character";  
+              flag = false;
+            }else{
+
+              document.getElementById("user_address").style.display = "none";
+            
+            }
+            //validation for city
+
+            if (usre_city == "select City") {  
+              
+              document.getElementById("label_city").innerHTML = "*Please Select City";  
+              flag = false;
+            } else{
+              document.getElementById("label_city").style.display = "none";
+             
+            }
+
+            // validation for state filed
+
+            if (usre_state == "select State") {  
+              document.getElementById("label_state").innerHTML = "*Please Select state";  
+                flag = false;  
+            } else{
+              document.getElementById("label_state").style.display = "none";
+              
+            }
+
+            // validation for pincode 
+
+            if (usre_pincode == null || usre_pincode== "")
+            {
+              document.getElementById("u_pincode").innerHTML = "*Enter valid pincode";
+              flag = false;
+            }else{
+              document.getElementById("u_pincode").style.display = "none";
+              flage = true;
+            }
+
+            // validation fo Gemder
+
+            if(one ==false && two==false){
+      
+              document.getElementById("u_gender").innerHTML = "*Please select Gender";
+              flag = false;
+            }else{
+              document.getElementById("u_gender").style.display = "none";
+              flage = true;
+            }
+
+            // validation for date of birth
+            var date = isfutureDate(label_dob);
+            if(date == false){
+              document.getElementById("dt_birth").innerHTML = "*Please Select Date Of Birth";
+              flag = false;
+            }else{
+              document.getElementById("dt_birth").style.display = "none";
+              flage = true;
+            }
+
+           // hobby validation
+            if (usrehobby == "" || usrehobby==null) {  
+                
+                document.getElementById("label_hobby").innerHTML = "*Please Select hobby";
+                flag = false;  
+            }else{
+              document.getElementById("label_hobby").style.display = "none";
+              flage = true;
+            }
+            
+            
+
+
+           
+
+            // mobile number validatiom
+            if(mo_number.length != 10 || mo_number == "") {
+              document.getElementById("u_phone_no").innerHTML = "*Please Enter valid phone number";
+              flag = false;
+          }else{
+            document.getElementById("u_phone_no").style.display = "none";
+            flage =true;
+          }
+
+          // call Email validation function
+         // validateEmail(user_emailid);
+          
+         const regex_pattern =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                
+                if (regex_pattern.test(user_emailid)) {
+                 
+                  document.getElementById("label_email").style.display = "none";
+                  flage = true;
+                }
+                else {
+                  document.getElementById("label_email").innerHTML = "*Please Enter valid Email address";
+                  flag = false;
+                }
+
+         if(flag == true)
+         {
+           
+           return myfunction();
+         }else{
+           
+         }
+      } 
+     
+       
+   
+
+            // function for not enter a alphabet in pin code
+            function isNumber(evt) {
+                  evt = (evt) ? evt : window.event;
+                  var charCode = (evt.which) ? evt.which : evt.keyCode;
+                  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    document.getElementById("u_phone_no").innerHTML = "*Please Enter valid phone number";
+                  }
+                  return true;
+              } 
+
+          // function for date of birth
+          function isfutureDate(value) 
+              {    
+              var now = new Date;
+              var target = new Date(value);
+
+              if (target.getFullYear() > now.getFullYear()) 
+              {
+                  return true;
+              }
+              else if(target.getFullYear() == now.getFullYear()) 
+              {
+              if (target.getMonth() > now.getMonth()) {
+              return true;
+              } 
+              else if(target.getMonth() == now.getMonth())
+              {
+              if (target.getDate() >= now.getDate()) {
+                  return true;
+              }
+              else
+              {
+                  return false
+              }
+              }
+             }
+
+            else{
+              return false;
+              }
+          }   
+
+
+
+
+        
+            
+          function check_event_validation()
+          {
+            validate();
+            console.log("hello");
+
+            var fname = document.getElementById("first_n");
+             fname.onchange = function(){
+              if (!(fname.value.length == 0 || fname.value==null)){
+                document.getElementById("f_name").style.display = "none";
+              }else{
+                console.log("$$$$$");
+                document.getElementById("f_name").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              
+                 }
+            }
+            var lname = document.getElementById("last_n");
+            lname.onchange = function(){
+              if (!(lname.value.length == 0 || lname.value == null)){
+                document.getElementById("l_name").style.display = "none";
+              }else{
+                console.log("######");
+                document.getElementById("l_name").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+
+            var add_ress =  document.getElementById("address");
+            add_ress.onchange = function(){
+              if (!((add_ress.length <20)|| (add_ress.length >100))){
+                document.getElementById("user_address").style.display = "none";
+              }else{
+                document.getElementById("user_address").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+
+
+            var usre_city = document.getElementById("city");
+            usre_city.onchange = function(){
+              if (!(usre_city == "select City")){
+                document.getElementById("label_city").style.display = "none";
+              }else{
+                document.getElementById("label_city").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+
+            var usre_state = document.getElementById("state");
+            usre_state.onchange = function(){
+              if (!(usre_state == "select State")){
+                document.getElementById("label_state").style.display = "none";
+              }else{
+                document.getElementById("label_state").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+
+            var usre_pincode =  document.getElementById("pincode");
+            usre_pincode.onchange = function(){
+              if (!(usre_pincode == null || usre_pincode== "")){
+                document.getElementById("u_pincode").style.display = "none";
+              }else{
+                document.getElementById("u_pincode").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+
+            var user_emailid =document.getElementById("Email");
+            const regex_pattern =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            user_emailid.onchange = function(){
+              if (!(regex_pattern.test(user_emailid))){
+                document.getElementById("label_email").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+               
+              }else{
+                document.getElementById("label_email").style.display = "none";
+              }
+            }
+
+
+            var one=document.getElementById('radioMale').checked;
+            
+           
+
+
+
+
+            one.onchange = function(){
+              if (!(one ==false)){
+                document.getElementById("u_gender").style.display = "none";
+              }else{
+                document.getElementById("u_gender").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+            var two=document.getElementById('radioFemale').checked;
+            two.onchange = function(){
+              if (!(two ==false)){
+                document.getElementById("u_gender").style.display = "none";
+              }else{
+                document.getElementById("u_gender").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+
+            var mo_number = document.getElementById('number');
+            mo_number.onchange = function(){
+              if (!(mo_number.length != 10 || mo_number == "")){
+                document.getElementById("u_phone_no").style.display = "none";
+              }else{
+                document.getElementById("u_phone_no").style.display = "block";
+                validate();
+                document.getElementById("tbl").style.display ="none";
+              }
+            }
+
+
+            var label_dob =document.getElementById('dateofbirth');
+            label_dob.onchange = function(){
+              var dob =document.getElementById('dateofbirth').value;
+              
+              var date = isfutureDate(dob);
+              console.log(date,"xxxxx");              
+              if(date == true ){
+                console.log(date,"xxxxx");
+                document.getElementById("dt_birth").style.display = "block";
+                document.getElementById("dt_birth").innerHTML = "*Please Select Date Of Birth";
+                document.getElementById("tbl").style.display ="none";
+               
+              }else{
+                document.getElementById("dt_birth").style.display = "none";
+              }
+            }
+           
+          }
+
+        
+          
+
+          
+
+</script>
